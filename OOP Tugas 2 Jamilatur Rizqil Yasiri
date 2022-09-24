@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas OOP 2 | G.211.21.0088 </title>
+    <style>
+        body {
+            box-sizing: border-box;
+            background: #efefef;
+            font-family: "copperplate";
+        }
+
+        .wrap {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #cecece;
+            width: 500px;
+            height: auto;
+            border-radius: 3px;
+            padding: 10px 12px;
+            box-shadow: 3px 3px 4px #bbb, -3px -3px 4px #fff;
+        }
+
+        h2 {
+            text-align: center;
+            font-weight: 800;
+        }
+
+        b {
+            text-align: center;
+            font-weight: 800;
+            background-color: #efefef;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <?php
+
+   interface Hewan
+   {
+       public function Binatang();
+       public function Makan();
+       public function Berjalan();
+       public function Bersuara();
+       public function Sepeda();
+   }
+   class Monyet implements Hewan
+   {
+       public function Binatang()
+       {
+           return "Monyet adalah seekor hewan <i>Primata</i><br/>";
+       }
+
+          public function Makan()
+          {
+              return "Monyet dapat berjalan.<br/>";
+          }
+
+          public function Berjalan()
+          {
+              return "Monyet Suka makan Pisang.<br/>";
+          }
+
+          public function Bersuara()
+          {
+              return "Monyet dapat bersuara.<br/>";
+          }
+          public function Sepeda()
+          {
+              return "Monyet juga bisa Berkendara seperti naik sepeda.<br/>";
+          }
+   }
+
+    ?>
+    <div class="wrap">
+        <h2>Tugas 2 || OOP PHP
+            <hr>
+        </h2>
+
+        <?php
+ $Monyet = new Monyet();
+    echo $Monyet->Binatang();
+    echo "<br>";
+    echo "<b>Monyet memiliki kemampuan : </b><br/>";
+    echo "<li>";
+    echo $Monyet->Makan();
+    echo "<li>";
+    echo $Monyet->Berjalan();
+    echo "<li>";
+    echo $Monyet->Bersuara();
+    echo "<hr>";
+    echo "<b>Apabila monyet dilatih maka : </b><br />";
+    echo "<li>";
+    echo $Monyet->Sepeda();
+    ?>
+        </p>
+    </div>
+</body>
+
+</html>
